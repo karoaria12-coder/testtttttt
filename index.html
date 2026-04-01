@@ -3,9 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bee1</title>
 
-  <!-- Google Font -->
+  <!-- Social Media Preview -->
+  <meta property="og:title" content="Bee1 Official Website" />
+  <meta property="og:description" content="All my links in one place." />
+  <meta property="og:image" content="https://bee1-me.vercel.app/preview.png" />
+  <meta property="og:url" content="https://bee1-me.vercel.app/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Preview -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bee1 Official Website">
+  <meta name="twitter:description" content="All my links in one place.">
+  <meta name="twitter:image" content="https://bee1-me.vercel.app/preview.png">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
@@ -15,27 +29,21 @@
     body {
       background: linear-gradient(90deg, gray, white, black);
       background-size: 200%;
-      animation: shine 3s linear infinite;
+      animation: shine 5s linear infinite;
       color: white;
       text-align: center;
-      font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+      font-family: 'Comic Neue', cursive;
       margin: 0;
-      padding: 0;
     }
 
     h1 {
-      color: white;
-      text-shadow: 0 0 8px white;
+      text-shadow: 0 0 10px white;
       animation: glow 2s ease-in-out infinite alternate;
     }
 
     @keyframes glow {
-      from {
-        text-shadow: 0 0 10px red, 0 0 20px white;
-      }
-      to {
-        text-shadow: 0 0 25px lightgray, 0 0 35px whitesmoke;
-      }
+      from { text-shadow: 0 0 10px red, 0 0 20px white; }
+      to { text-shadow: 0 0 25px lightgray, 0 0 35px whitesmoke; }
     }
 
     .links {
@@ -43,7 +51,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 20px;
     }
 
     a {
@@ -54,19 +62,17 @@
       color: whitesmoke;
       border: 2px solid red;
       border-radius: 10px;
-      box-shadow: 0 0 10px 2px red;
+      box-shadow: 0 0 10px red;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: 0.3s;
       font-size: 18px;
     }
 
     a:hover {
-      color: gray;
       transform: scale(1.1);
-      box-shadow: 0 0 20px 5px white;
+      color: gray;
       background: linear-gradient(100deg, black, gray, black);
-      background-size: 200%;
-      animation: shine 3s linear infinite;
+      box-shadow: 0 0 20px white;
     }
 
     .fa-brands {
@@ -76,27 +82,23 @@
     .glow-btn {
       background: linear-gradient(90deg, blue, red, purple);
       background-size: 200%;
-      animation: shine 3s linear infinite;
+      animation: shine 5s linear infinite;
     }
 
     @keyframes shine {
-      0% {
-        background-position: 200% center;
-      }
-      100% {
-        background-position: 0 center;
-      }
+      0% { background-position: 200% center; }
+      100% { background-position: 0 center; }
     }
 
-    /* ABOUT ME SECTION */
     .about-box {
-      width: 70%;
+      width: 90%;
+      max-width: 700px;
       margin: 50px auto;
       padding: 25px;
       background: rgba(0, 0, 0, 0.7);
       border: 2px solid red;
       border-radius: 15px;
-      box-shadow: 0 0 15px 4px red;
+      box-shadow: 0 0 15px red;
       animation: fadeIn 2s ease-in-out;
     }
 
@@ -113,7 +115,7 @@
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h4, h5 {
@@ -123,13 +125,23 @@
     h5 {
       color: red;
     }
+
+    /* Hide music player properly */
+    .music-player {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
 
-  <h1>Welcome For This Website</h1>
-  <h1>Social Links...</h1>
+  <!-- Background Music (muted required for autoplay) -->
+  <iframe class="music-player"
+    src="https://www.youtube.com/embed/KtlgYxa6BMU?autoplay=1&mute=1&loop=1&playlist=KtlgYxa6BMU">
+  </iframe>
+
+  <h1>Welcome To This Website</h1>
+  <h1>Social Links</h1>
 
   <div class="links">
     <a class="glow-btn" href="https://www.twitch.tv/k4r0_r6" target="_blank">
@@ -140,15 +152,15 @@
       <i class="fa-brands fa-youtube"></i> YouTube
     </a>
   </div>
+
   <h4>Discord Username: <span style="color: lightgray;">karor6</span></h4>
 
-  <!-- ABOUT ME SECTION -->
   <div class="about-box">
     <h2>About Me</h2>
     <p>
-      Hello! I'm <strong>Bee1</strong> — a creator who enjoys gaming, streaming, 
-      designing websites, and building fun online experiences.  
-      I love learning new things and improving my skills every day.  
+      Hello! I'm <strong>Bee1</strong> — a creator who enjoys gaming, streaming,
+      designing websites, and building fun online experiences.
+      I love learning new things and improving my skills every day.
       This website is a small project to share my links and show my style!
     </p>
   </div>
@@ -156,5 +168,4 @@
   <h5>Developed By: Bee1</h5>
 
 </body>
-
 </html>
